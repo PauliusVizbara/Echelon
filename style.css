@@ -1,8 +1,14 @@
 @import url("./assets/fonts/SourceSansPro-Regular.ttf");
 
+:root {
+  --main-bg-color: #000;
+  --main-text-color: #e3e3e3;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
+  color: var(--main-text-color);
 }
 
 body {
@@ -10,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--main-bg-color);
 }
 
 main {
