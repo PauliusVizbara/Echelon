@@ -1,14 +1,19 @@
 @import url("./assets/fonts/SourceSansPro-Regular.ttf");
 
 :root {
-  --main-bg-color: #000;
+  --main-bg-color: #0e0e0e;
   --main-text-color: #e3e3e3;
+  --main-text-color-lighter: #f4f4f4;
 }
 
 * {
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
   color: var(--main-text-color);
+}
+
+header {
+  margin: 0 auto;
 }
 
 body {
@@ -21,4 +26,40 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navigation li a {
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.navigation li a:hover {
+  color: var(--main-text-color-lighter);
+}
+
+.container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .container {
+    width: 1536px;
+  }
 }
