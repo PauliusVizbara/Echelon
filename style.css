@@ -63,3 +63,11 @@ main {
     width: 1536px;
   }
 }
+
+.hero {
+  position: relative;
+}
+
+.hero-video {
+  width: 100%;
+}
