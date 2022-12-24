@@ -26,21 +26,10 @@ export function Hero() {
           </svg>
           <main className="mx-auto mt-10 px-4 sm:mt-12 sm:px-6 md:mt-16 xl:mt-20 xl:pl-40 xl:pr-24 xl:mt-28">
             <div className="sm:text-center xl:text-left">
-              <Transition
-                show={true}
-                appear={true}
-                enter="transform transition ease-out duration-[1000ms]"
-                enterFrom="scale-150"
-                enterTo="scale-100"
-                leave="transform duration-200 transition ease-in-out"
-                leaveFrom="opacity-100  scale-100 "
-                leaveTo="opacity-0 scale-95 "
-              >
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
-                  <span className="inline text-stone-800 xl:inline">Grupė</span>
-                </h1>
-              </Transition>
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
+                <span className="inline text-stone-800 xl:inline">Grupė</span>
+              </h1>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl xl:mx-0">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                 fugiat veniam occaecat fugiat aliqua.
