@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { About } from 'components/About'
 import { Footer } from 'components/Footer'
 import { Hero } from 'components/Hero'
 
@@ -14,6 +15,8 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <div className='py-20' />
+        <About />
         <Footer />
       </main>
     </>
