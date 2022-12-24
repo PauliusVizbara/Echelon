@@ -1,5 +1,6 @@
 import { Header } from './Header'
-
+import hero from 'images/hero.jpg'
+import Image from 'next/image'
 
 export function Hero() {
   return (
@@ -22,7 +23,7 @@ export function Hero() {
             <div className="sm:text-center xl:text-left">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
-                <span className="inline text-stone-800 xl:inline">Mokymai</span>
+                <span className="inline text-stone-800 xl:inline">Grupė</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl xl:mx-0">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
@@ -34,7 +35,7 @@ export function Hero() {
                     href="#"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-stone-800 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
                   >
-                    Paslaugos
+                    Susisiekti
                   </a>
                 </div>
 
@@ -44,11 +45,7 @@ export function Hero() {
         </div>
       </div>
       <div className="xl:absolute xl:inset-y-0 xl:right-0 xl:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 xl:h-full xl:w-full"
-          src="images/hero.jpg"
-          alt=""
-        />
+        <Image src={hero} alt="Hero image" />
       </div>
     </div>
   )

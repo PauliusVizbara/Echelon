@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { Container } from 'components/Container'
 import { NavLink } from 'components/NavLink'
 import Image from 'next/image'
-import logo from '../images/logo.png'
+import logo from 'images/logo.png'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -103,9 +103,9 @@ export function Header() {
               />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#features">Apie</NavLink>
+              <NavLink href="#testimonials">Paslaugos</NavLink>
+              <NavLink href="#pricing">Kontaktai</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
