@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Help() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -15,9 +15,6 @@ export default function Help() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
