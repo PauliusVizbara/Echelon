@@ -1,9 +1,14 @@
-import hero from 'images/hero.jpg'
+import { useState } from 'react'
+import { Transition } from '@headlessui/react'
 import Image from 'next/image'
 
 import { Header } from './header/Header'
 
+import hero from 'images/hero.jpg'
+
 export function Hero() {
+
+  const [isShowing, setIsShowing] = useState(false)
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="xl:w-1/2">
@@ -26,6 +31,21 @@ export function Hero() {
                 <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
                 <span className="inline text-stone-800 xl:inline">Grupė</span>
               </h1>
+              <button onClick={() => setIsShowing((isShowing) => !isShowing)}>
+                Toggle
+              </button>
+              <Transition
+                show={true}
+                appear={true}
+                enter="transition-opacity duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-150"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                I will fade in and out
+              </Transition>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl xl:mx-0">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                 fugiat veniam occaecat fugiat aliqua.
@@ -46,7 +66,18 @@ export function Hero() {
         </div>
       </div>
       <div className="xl:absolute xl:inset-y-0 xl:right-0 xl:w-1/2">
-        <Image src={hero} alt="Hero image" />
+        <Transition
+          show={true}
+          appear={true}
+          enter="transform transition ease-out duration-[1000ms]"
+          enterFrom="scale-150"
+          enterTo="scale-100"
+          leave="transform duration-200 transition ease-in-out"
+          leaveFrom="opacity-100  scale-100 "
+          leaveTo="opacity-0 scale-95 "
+        >
+          <Image src={hero} alt="Hero image" />
+        </Transition>
       </div>
     </div>
   )
