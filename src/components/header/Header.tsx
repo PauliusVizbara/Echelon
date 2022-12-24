@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { NAVIGATION_ROUTES } from 'shared/constants'
 
 import { Container } from 'components/Container'
 import { NavLink } from 'components/NavLink'
@@ -24,9 +25,9 @@ export function Header() {
               />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Apie</NavLink>
-              <NavLink href="#testimonials">Paslaugos</NavLink>
-              <NavLink href="#pricing">Kontaktai</NavLink>
+              {NAVIGATION_ROUTES.map(route =>
+                <NavLink key={route.href} href={route.href}>{route.name}</NavLink>
+              )}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
