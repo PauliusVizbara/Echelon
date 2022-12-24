@@ -8,7 +8,6 @@ import hero from 'images/hero.jpg'
 
 export function Hero() {
 
-  const [isShowing, setIsShowing] = useState(false)
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="xl:w-1/2">
@@ -27,24 +26,20 @@ export function Hero() {
           </svg>
           <main className="mx-auto mt-10 px-4 sm:mt-12 sm:px-6 md:mt-16 xl:mt-20 xl:pl-40 xl:pr-24 xl:mt-28">
             <div className="sm:text-center xl:text-left">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
-                <span className="inline text-stone-800 xl:inline">Grupė</span>
-              </h1>
-              <button onClick={() => setIsShowing((isShowing) => !isShowing)}>
-                Toggle
-              </button>
               <Transition
                 show={true}
                 appear={true}
-                enter="transition-opacity duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-150"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
+                enter="transform transition ease-out duration-[1000ms]"
+                enterFrom="scale-150"
+                enterTo="scale-100"
+                leave="transform duration-200 transition ease-in-out"
+                leaveFrom="opacity-100  scale-100 "
+                leaveTo="opacity-0 scale-95 "
               >
-                I will fade in and out
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                  <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
+                  <span className="inline text-stone-800 xl:inline">Grupė</span>
+                </h1>
               </Transition>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl xl:mx-0">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
