@@ -1,10 +1,12 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Container } from 'components/Container'
 import { NavLink } from 'components/NavLink'
-import Image from 'next/image'
-import logo from 'images/logo.png'
+
 import { MobileNavigation } from './MobileNavigation'
+
+import logo from 'images/logo.png'
 
 
 

@@ -1,7 +1,8 @@
+import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import clsx from "clsx"
+
 import { NavLink } from "components/NavLink"
-import { Fragment } from "react"
 
 interface MobileNavLinkProps {
     href: string;

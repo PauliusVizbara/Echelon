@@ -1,6 +1,7 @@
-import { Header } from './header/Header'
 import hero from 'images/hero.jpg'
 import Image from 'next/image'
+
+import { Header } from './header/Header'
 
 export function Hero() {
   return (
