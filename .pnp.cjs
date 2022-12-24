@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.26"],\
             ["@types/react-dom", "npm:18.0.10"],\
             ["autoprefixer", "virtual:eca0a80ca8c08d7782294faafa9a464345265fd78442bd2e1da1eb997c8e3a5298d9d52d7f42838ff5de81620f8a5f1344501df4cd14b41aa99623c49d6108ad#npm:10.4.13"],\
+            ["clsx", "npm:1.2.1"],\
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-next", "virtual:eca0a80ca8c08d7782294faafa9a464345265fd78442bd2e1da1eb997c8e3a5298d9d52d7f42838ff5de81620f8a5f1344501df4cd14b41aa99623c49d6108ad#npm:13.1.0"],\
             ["next", "virtual:eca0a80ca8c08d7782294faafa9a464345265fd78442bd2e1da1eb997c8e3a5298d9d52d7f42838ff5de81620f8a5f1344501df4cd14b41aa99623c49d6108ad#npm:13.1.0"],\
@@ -1054,6 +1055,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["clsx", [\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/clsx-npm-1.2.1-77792dc182-30befca801.zip/node_modules/clsx/",\
+          "packageDependencies": [\
+            ["clsx", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["color-convert", [\
         ["npm:2.0.1", {\
           "packageLocation": "./.yarn/cache/color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip/node_modules/color-convert/",\
@@ -1339,6 +1349,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.26"],\
             ["@types/react-dom", "npm:18.0.10"],\
             ["autoprefixer", "virtual:eca0a80ca8c08d7782294faafa9a464345265fd78442bd2e1da1eb997c8e3a5298d9d52d7f42838ff5de81620f8a5f1344501df4cd14b41aa99623c49d6108ad#npm:10.4.13"],\
+            ["clsx", "npm:1.2.1"],\
             ["eslint", "npm:8.30.0"],\
             ["eslint-config-next", "virtual:eca0a80ca8c08d7782294faafa9a464345265fd78442bd2e1da1eb997c8e3a5298d9d52d7f42838ff5de81620f8a5f1344501df4cd14b41aa99623c49d6108ad#npm:13.1.0"],\
             ["next", "virtual:eca0a80ca8c08d7782294faafa9a464345265fd78442bd2e1da1eb997c8e3a5298d9d52d7f42838ff5de81620f8a5f1344501df4cd14b41aa99623c49d6108ad#npm:13.1.0"],\
