@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Image from 'next/image'
 
@@ -8,7 +7,6 @@ import hero from 'images/hero.jpg'
 
 export function Hero() {
 
-  const [showTitle, setShowTitle] = useState(false)
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="xl:w-1/2">
@@ -30,11 +28,11 @@ export function Hero() {
               <h1 className="relative overflow-hidden text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
                 <Transition
                   appear
-                  show={!showTitle}
+                  show
                   className="absolute w-full h-full bg-white"
-                  leave="transition ease-in-out duration-[2000ms] transform"
-                  leaveFrom="translate-x-0"
-                  leaveTo="translate-x-full"
+                  enter="transition ease-in-out duration-[2000ms] transform"
+                  enterFrom="translate-x-0"
+                  enterTo="translate-x-full"
                 >
                 </Transition>
 
@@ -67,7 +65,6 @@ export function Hero() {
           enter="transform transition ease-out duration-[1000ms]"
           enterFrom="scale-150 opacity-0"
           enterTo="scale-100 opacity-100"
-          afterEnter={() => setShowTitle(true)}
         >
           <Image src={hero} alt="Hero image" />
         </Transition>
