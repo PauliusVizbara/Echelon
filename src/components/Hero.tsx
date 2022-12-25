@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Image from 'next/image'
 
@@ -7,6 +8,7 @@ import hero from 'images/hero.jpg'
 
 export function Hero() {
 
+  const [showTitle, setShowTitle] = useState(false)
   return (
     <div className="relative overflow-hidden bg-white">
       <div className="xl:w-1/2">
@@ -25,7 +27,17 @@ export function Hero() {
           </svg>
           <main className="mx-auto mt-10 px-4 sm:mt-12 sm:px-6 md:mt-16 xl:mt-20 xl:pl-40 xl:pr-24 xl:mt-28">
             <div className="sm:text-center xl:text-left">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="relative overflow-hidden text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
+                <Transition
+                  appear
+                  show={!showTitle}
+                  className="absolute w-full h-full bg-white"
+                  leave="transition ease-in-out duration-[2000ms] transform"
+                  leaveFrom="translate-x-0"
+                  leaveTo="translate-x-full"
+                >
+                </Transition>
+
                 <span className="inline text-white bg-stone-800 px-2">Echelon</span>{' '}
                 <span className="inline text-stone-800 xl:inline">Grupė</span>
               </h1>
@@ -50,14 +62,12 @@ export function Hero() {
       </div>
       <div className="xl:absolute xl:inset-y-0 xl:right-0 xl:w-1/2">
         <Transition
-          show={true}
-          appear={true}
+          show
+          appear
           enter="transform transition ease-out duration-[1000ms]"
-          enterFrom="scale-150"
-          enterTo="scale-100"
-          leave="transform duration-200 transition ease-in-out"
-          leaveFrom="opacity-100  scale-100 "
-          leaveTo="opacity-0 scale-95 "
+          enterFrom="scale-150 opacity-0"
+          enterTo="scale-100 opacity-100"
+          afterEnter={() => setShowTitle(true)}
         >
           <Image src={hero} alt="Hero image" />
         </Transition>
